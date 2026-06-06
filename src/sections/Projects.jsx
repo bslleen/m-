@@ -26,7 +26,11 @@ export default function Projects() {
                 <span key={tag} className="tag">{tag}</span>
               ))}
             </div>
-            <span className="project-arrow">↗</span>
+            <span className="project-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
           </ScrollReveal>
         ))}
       </div>
