@@ -42,8 +42,18 @@ export default function RainCanvas() {
     }
     draw()
 
+    const onVisibility = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(rafId)
+      } else {
+        rafId = requestAnimationFrame(draw)
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibility)
+
     return () => {
       window.removeEventListener('resize', resize)
+      document.removeEventListener('visibilitychange', onVisibility)
       cancelAnimationFrame(rafId)
     }
   }, [])
