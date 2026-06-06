@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { writings } from '../data/writing'
+import Cursor from '../components/Cursor'
 
 export default function ArticlePage() {
   const { slug } = useParams()
@@ -21,6 +22,7 @@ export default function ArticlePage() {
 
   return (
     <div className="article-page">
+      <Cursor />
       <header className="article-nav">
         <Link to="/" className="article-back">← Back</Link>
       </header>

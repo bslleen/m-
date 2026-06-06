@@ -627,6 +627,7 @@ body::after {
 .article-page {
   min-height: 100vh;
   background: var(--lavender);
+  cursor: none;
 }
 
 .article-nav {
