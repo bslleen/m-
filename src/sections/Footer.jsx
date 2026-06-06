@@ -3,7 +3,7 @@ export default function Footer() {
     <footer>
       <p className="footer-note">Stick around if you're interested.</p>
       <ul className="footer-links">
-        <li><a href="#">GitHub</a></li>
+        <li><a href="https://github.com/bslleen" target="_blank" rel="noreferrer">GitHub</a></li>
         <li><a href="#">LinkedIn</a></li>
         <li><a href="#">Upwork</a></li>
       </ul>

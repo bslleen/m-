@@ -11,7 +11,7 @@ export default function Contact() {
         <p style={{ fontSize: '1.1rem', color: 'var(--ink-soft)', lineHeight: 1.8, maxWidth: '500px', marginBottom: '3rem' }}>
           I'm open to freelance projects. If what you're building needs to feel like something — reach out.
         </p>
-        <a href="mailto:lina@example.com" className="btn-primary"><span>Send a message</span></a>
+        <a href="mailto:bslleen@icloud.com" className="btn-primary"><span>Send a message</span></a>
       </ScrollReveal>
     </section>
   )
