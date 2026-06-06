@@ -8,6 +8,7 @@ export function useCursor() {
   const rafRef = useRef(null)
 
   useEffect(() => {
+    if (window.matchMedia('(hover: none)').matches) return
     const cursor = cursorRef.current
     const ringEl = ringRef.current
     if (!cursor || !ringEl) return
