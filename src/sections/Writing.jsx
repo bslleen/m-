@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
 import { writings } from '../data/writing'
 
@@ -9,8 +10,8 @@ export default function Writing() {
         {writings.map((item, i) => (
           <ScrollReveal
             key={i}
-            as="a"
-            href={item.url}
+            as={Link}
+            to={`/writing/${item.slug}`}
             className="writing-item"
             style={{ transitionDelay: `${i * 0.1}s` }}
           >
