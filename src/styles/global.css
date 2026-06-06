@@ -632,27 +632,32 @@ body::after {
 /* Responsive */
 @media (max-width: 768px) {
   nav { padding: 1.5rem; }
-  .nav-hamburger { display: flex; position: relative; z-index: 201; }
+  .nav-hamburger { display: flex; }
   .nav-links {
     display: none;
-    position: fixed;
-    inset: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
     background: var(--lavender);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     gap: 0;
-    z-index: 200;
+    min-width: 180px;
+    border-top: 1px solid var(--mist);
+    box-shadow: 0 8px 24px rgba(46,42,66,0.08);
   }
   .nav-links.nav-open { display: flex; }
-  .nav-links li { width: 100%; text-align: center; }
+  .nav-links li { width: 100%; }
   .nav-links a {
     display: block;
-    font-size: 1.4rem;
-    letter-spacing: 0.25em;
-    padding: 1.25rem 2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+    padding: 1rem 1.5rem;
     color: var(--ink);
+    border-bottom: 1px solid var(--mist);
+    text-align: right;
   }
+  .nav-links li:last-child a { border-bottom: none; }
   .hero { padding: 7rem 1.5rem 3rem; }
   .section { padding: 5rem 1.5rem; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
